@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Insert row in a table</title>
+</head>
+<body>
+    <table id="sampleTable" border="1">
+        <tr><td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr><td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" onclick="insert_Row()" value="Insert row">
+
+    <script>
+        const insert_Row = () => {
+         
+            var table = document.getElementById("sampleTable");
+            //prepare an insert variable for insertion
+
+            var newRowValue = table.insertRow();
+
+            var rowCell1 = newRowValue.insertCell(0);
+            var rowCell2 = newRowValue.insertCell(1);
+
+            rowCell1.innerHTML = "New cell1"
+            rowCell2.innerHTML = "New cell2"
+        }
+    </script>
+</body>
+</html>

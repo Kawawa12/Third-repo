@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3><p>
+        Click the button to cahange color
+    </p></h3>
+    <h3><p>
+        Welcome to Internent Programming in 2004
+    </p></h3>
+    
+    <button onclick="changeColor()">Change color</button>
+
+    <script>
+        function changeColor() {
+            var paragraphs = document.getElementsByTagName("p");
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.backgroundColor = "blue";
+            }
+        }
+    </script>
+</body>
+</html>
